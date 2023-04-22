@@ -1,15 +1,15 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Yared\\Source\\Repos\\ProyectoITrimestre\\ProyectoITrimestre\\GUI.csproj": {}
+    "C:\\Users\\Yared\\source\\repos\\ProyectoITrimestre\\ProyectoITrimestre\\GUI.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Yared\\Source\\Repos\\ProyectoITrimestre\\BL\\BL.csproj": {
+    "C:\\Users\\Yared\\source\\repos\\ProyectoITrimestre\\BL\\BL.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Yared\\Source\\Repos\\ProyectoITrimestre\\BL\\BL.csproj",
+        "projectUniqueName": "C:\\Users\\Yared\\source\\repos\\ProyectoITrimestre\\BL\\BL.csproj",
         "projectName": "BL",
-        "projectPath": "C:\\Users\\Yared\\Source\\Repos\\ProyectoITrimestre\\BL\\BL.csproj",
+        "projectPath": "C:\\Users\\Yared\\source\\repos\\ProyectoITrimestre\\BL\\BL.csproj",
         "packagesPath": "C:\\Users\\Yared\\.nuget\\packages\\",
         "outputPath": "C:\\Users\\Yared\\Source\\Repos\\ProyectoITrimestre\\BL\\obj\\",
         "projectStyle": "PackageReference",
@@ -33,11 +33,11 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "C:\\Users\\Yared\\Source\\Repos\\ProyectoITrimestre\\DAL\\DAL.csproj": {
-                "projectPath": "C:\\Users\\Yared\\Source\\Repos\\ProyectoITrimestre\\DAL\\DAL.csproj"
+              "C:\\Users\\Yared\\source\\repos\\ProyectoITrimestre\\DAL\\DAL.csproj": {
+                "projectPath": "C:\\Users\\Yared\\source\\repos\\ProyectoITrimestre\\DAL\\DAL.csproj"
               },
-              "C:\\Users\\Yared\\Source\\Repos\\ProyectoITrimestre\\ET\\ET.csproj": {
-                "projectPath": "C:\\Users\\Yared\\Source\\Repos\\ProyectoITrimestre\\ET\\ET.csproj"
+              "C:\\Users\\Yared\\source\\repos\\ProyectoITrimestre\\ET\\ET.csproj": {
+                "projectPath": "C:\\Users\\Yared\\source\\repos\\ProyectoITrimestre\\ET\\ET.csproj"
               }
             }
           }
@@ -71,12 +71,12 @@
         }
       }
     },
-    "C:\\Users\\Yared\\Source\\Repos\\ProyectoITrimestre\\DAL\\DAL.csproj": {
+    "C:\\Users\\Yared\\source\\repos\\ProyectoITrimestre\\DAL\\DAL.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Yared\\Source\\Repos\\ProyectoITrimestre\\DAL\\DAL.csproj",
+        "projectUniqueName": "C:\\Users\\Yared\\source\\repos\\ProyectoITrimestre\\DAL\\DAL.csproj",
         "projectName": "DAL",
-        "projectPath": "C:\\Users\\Yared\\Source\\Repos\\ProyectoITrimestre\\DAL\\DAL.csproj",
+        "projectPath": "C:\\Users\\Yared\\source\\repos\\ProyectoITrimestre\\DAL\\DAL.csproj",
         "packagesPath": "C:\\Users\\Yared\\.nuget\\packages\\",
         "outputPath": "C:\\Users\\Yared\\Source\\Repos\\ProyectoITrimestre\\DAL\\obj\\",
         "projectStyle": "PackageReference",
@@ -100,8 +100,8 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "C:\\Users\\Yared\\Source\\Repos\\ProyectoITrimestre\\ET\\ET.csproj": {
-                "projectPath": "C:\\Users\\Yared\\Source\\Repos\\ProyectoITrimestre\\ET\\ET.csproj"
+              "C:\\Users\\Yared\\source\\repos\\ProyectoITrimestre\\ET\\ET.csproj": {
+                "projectPath": "C:\\Users\\Yared\\source\\repos\\ProyectoITrimestre\\ET\\ET.csproj"
               }
             }
           }
@@ -141,12 +141,12 @@
         }
       }
     },
-    "C:\\Users\\Yared\\Source\\Repos\\ProyectoITrimestre\\ET\\ET.csproj": {
+    "C:\\Users\\Yared\\source\\repos\\ProyectoITrimestre\\ET\\ET.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Yared\\Source\\Repos\\ProyectoITrimestre\\ET\\ET.csproj",
+        "projectUniqueName": "C:\\Users\\Yared\\source\\repos\\ProyectoITrimestre\\ET\\ET.csproj",
         "projectName": "ET",
-        "projectPath": "C:\\Users\\Yared\\Source\\Repos\\ProyectoITrimestre\\ET\\ET.csproj",
+        "projectPath": "C:\\Users\\Yared\\source\\repos\\ProyectoITrimestre\\ET\\ET.csproj",
         "packagesPath": "C:\\Users\\Yared\\.nuget\\packages\\",
         "outputPath": "C:\\Users\\Yared\\Source\\Repos\\ProyectoITrimestre\\ET\\obj\\",
         "projectStyle": "PackageReference",
@@ -201,12 +201,12 @@
         }
       }
     },
-    "C:\\Users\\Yared\\Source\\Repos\\ProyectoITrimestre\\ProyectoITrimestre\\GUI.csproj": {
+    "C:\\Users\\Yared\\source\\repos\\ProyectoITrimestre\\ProyectoITrimestre\\GUI.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Yared\\Source\\Repos\\ProyectoITrimestre\\ProyectoITrimestre\\GUI.csproj",
+        "projectUniqueName": "C:\\Users\\Yared\\source\\repos\\ProyectoITrimestre\\ProyectoITrimestre\\GUI.csproj",
         "projectName": "GUI",
-        "projectPath": "C:\\Users\\Yared\\Source\\Repos\\ProyectoITrimestre\\ProyectoITrimestre\\GUI.csproj",
+        "projectPath": "C:\\Users\\Yared\\source\\repos\\ProyectoITrimestre\\ProyectoITrimestre\\GUI.csproj",
         "packagesPath": "C:\\Users\\Yared\\.nuget\\packages\\",
         "outputPath": "C:\\Users\\Yared\\Source\\Repos\\ProyectoITrimestre\\ProyectoITrimestre\\obj\\",
         "projectStyle": "PackageReference",
@@ -230,11 +230,11 @@
           "net6.0-windows7.0": {
             "targetAlias": "net6.0-windows",
             "projectReferences": {
-              "C:\\Users\\Yared\\Source\\Repos\\ProyectoITrimestre\\BL\\BL.csproj": {
-                "projectPath": "C:\\Users\\Yared\\Source\\Repos\\ProyectoITrimestre\\BL\\BL.csproj"
+              "C:\\Users\\Yared\\source\\repos\\ProyectoITrimestre\\BL\\BL.csproj": {
+                "projectPath": "C:\\Users\\Yared\\source\\repos\\ProyectoITrimestre\\BL\\BL.csproj"
               },
-              "C:\\Users\\Yared\\Source\\Repos\\ProyectoITrimestre\\ET\\ET.csproj": {
-                "projectPath": "C:\\Users\\Yared\\Source\\Repos\\ProyectoITrimestre\\ET\\ET.csproj"
+              "C:\\Users\\Yared\\source\\repos\\ProyectoITrimestre\\ET\\ET.csproj": {
+                "projectPath": "C:\\Users\\Yared\\source\\repos\\ProyectoITrimestre\\ET\\ET.csproj"
               }
             }
           }

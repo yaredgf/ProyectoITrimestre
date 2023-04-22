@@ -530,9 +530,9 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Yared\\Source\\Repos\\ProyectoITrimestre\\ProyectoITrimestre\\GUI.csproj",
+      "projectUniqueName": "C:\\Users\\Yared\\source\\repos\\ProyectoITrimestre\\ProyectoITrimestre\\GUI.csproj",
       "projectName": "GUI",
-      "projectPath": "C:\\Users\\Yared\\Source\\Repos\\ProyectoITrimestre\\ProyectoITrimestre\\GUI.csproj",
+      "projectPath": "C:\\Users\\Yared\\source\\repos\\ProyectoITrimestre\\ProyectoITrimestre\\GUI.csproj",
       "packagesPath": "C:\\Users\\Yared\\.nuget\\packages\\",
       "outputPath": "C:\\Users\\Yared\\Source\\Repos\\ProyectoITrimestre\\ProyectoITrimestre\\obj\\",
       "projectStyle": "PackageReference",
@@ -556,11 +556,11 @@
         "net6.0-windows7.0": {
           "targetAlias": "net6.0-windows",
           "projectReferences": {
-            "C:\\Users\\Yared\\Source\\Repos\\ProyectoITrimestre\\BL\\BL.csproj": {
-              "projectPath": "C:\\Users\\Yared\\Source\\Repos\\ProyectoITrimestre\\BL\\BL.csproj"
+            "C:\\Users\\Yared\\source\\repos\\ProyectoITrimestre\\BL\\BL.csproj": {
+              "projectPath": "C:\\Users\\Yared\\source\\repos\\ProyectoITrimestre\\BL\\BL.csproj"
             },
-            "C:\\Users\\Yared\\Source\\Repos\\ProyectoITrimestre\\ET\\ET.csproj": {
-              "projectPath": "C:\\Users\\Yared\\Source\\Repos\\ProyectoITrimestre\\ET\\ET.csproj"
+            "C:\\Users\\Yared\\source\\repos\\ProyectoITrimestre\\ET\\ET.csproj": {
+              "projectPath": "C:\\Users\\Yared\\source\\repos\\ProyectoITrimestre\\ET\\ET.csproj"
             }
           }
         }

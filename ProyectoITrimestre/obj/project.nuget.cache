@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "ORmdzzefCGryI+0lN1JjiV1x9k5J2x0RV4yTCZrXh9TNFCCG0eTRMG/MvWWB3MhVdaTZWEGUVLELiC5ochE+ag==",
+  "dgSpecHash": "F40AEgKMphJTdaVBgtbTGooBCEITG9Dp0KEj44zsOJMt0DqDRaabl7H8Kjo2r/v6KtgEnybL+O38732uCzdZvw==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Yared\\Source\\Repos\\ProyectoITrimestre\\ProyectoITrimestre\\GUI.csproj",
+  "projectFilePath": "C:\\Users\\Yared\\source\\repos\\ProyectoITrimestre\\ProyectoITrimestre\\GUI.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Yared\\.nuget\\packages\\microsoft.netcore.platforms\\3.1.0\\microsoft.netcore.platforms.3.1.0.nupkg.sha512",
     "C:\\Users\\Yared\\.nuget\\packages\\microsoft.win32.registry\\4.7.0\\microsoft.win32.registry.4.7.0.nupkg.sha512",
