@@ -56,16 +56,19 @@ namespace GUI
                     }
                     if (!encontrado)
                     {
+                        MessageBox.Show(dgvBuscarTodos.Rows[i].Index.ToString());
+                        dgvBuscarTodos.Rows[i].
+                        dgvBuscarTodos.Rows[i].Visible = false;
                         try
                         {
-                            dgvBuscarTodos.Rows[i].Visible = false;
                         }
                         catch
                         {
                             dgvBuscarTodos.DataSource = new DataTable();
                         }
                     }
-                        
+
+
                 }
             }
             else

@@ -34,3 +34,15 @@ C:\Users\PC\OneDrive\Escritorio\ProyectoITrimestre\ET\obj\Debug\net6.0\ET.dll
 C:\Users\PC\OneDrive\Escritorio\ProyectoITrimestre\ET\obj\Debug\net6.0\refint\ET.dll
 C:\Users\PC\OneDrive\Escritorio\ProyectoITrimestre\ET\obj\Debug\net6.0\ET.pdb
 C:\Users\PC\OneDrive\Escritorio\ProyectoITrimestre\ET\obj\Debug\net6.0\ref\ET.dll
+C:\Users\Yared\source\repos\ProyectoITrimestre\ET\bin\Debug\net6.0\ET.deps.json
+C:\Users\Yared\source\repos\ProyectoITrimestre\ET\bin\Debug\net6.0\ET.dll
+C:\Users\Yared\source\repos\ProyectoITrimestre\ET\bin\Debug\net6.0\ET.pdb
+C:\Users\Yared\source\repos\ProyectoITrimestre\ET\obj\Debug\net6.0\ET.csproj.AssemblyReference.cache
+C:\Users\Yared\source\repos\ProyectoITrimestre\ET\obj\Debug\net6.0\ET.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Yared\source\repos\ProyectoITrimestre\ET\obj\Debug\net6.0\ET.AssemblyInfoInputs.cache
+C:\Users\Yared\source\repos\ProyectoITrimestre\ET\obj\Debug\net6.0\ET.AssemblyInfo.cs
+C:\Users\Yared\source\repos\ProyectoITrimestre\ET\obj\Debug\net6.0\ET.csproj.CoreCompileInputs.cache
+C:\Users\Yared\source\repos\ProyectoITrimestre\ET\obj\Debug\net6.0\ET.dll
+C:\Users\Yared\source\repos\ProyectoITrimestre\ET\obj\Debug\net6.0\refint\ET.dll
+C:\Users\Yared\source\repos\ProyectoITrimestre\ET\obj\Debug\net6.0\ET.pdb
+C:\Users\Yared\source\repos\ProyectoITrimestre\ET\obj\Debug\net6.0\ref\ET.dll
