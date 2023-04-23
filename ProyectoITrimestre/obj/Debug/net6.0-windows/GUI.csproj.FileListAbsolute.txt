@@ -130,3 +130,4 @@ C:\Users\Yared\source\repos\ProyectoITrimestre\ProyectoITrimestre\obj\Debug\net6
 C:\Users\Yared\source\repos\ProyectoITrimestre\ProyectoITrimestre\obj\Debug\net6.0-windows\GUI.pdb
 C:\Users\Yared\source\repos\ProyectoITrimestre\ProyectoITrimestre\obj\Debug\net6.0-windows\GUI.genruntimeconfig.cache
 C:\Users\Yared\source\repos\ProyectoITrimestre\ProyectoITrimestre\obj\Debug\net6.0-windows\ref\GUI.dll
+C:\Users\Yared\source\repos\ProyectoITrimestre\ProyectoITrimestre\obj\Debug\net6.0-windows\GUI.IngresarClientes.resources

@@ -7,6 +7,9 @@
     <Compile Update="BuscarTodos.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="IngresarClientes.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="Login.cs">
       <SubType>Form</SubType>
     </Compile>

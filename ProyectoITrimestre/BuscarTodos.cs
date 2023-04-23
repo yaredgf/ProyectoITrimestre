@@ -38,8 +38,31 @@ namespace GUI
 
         }
 
+        private DataTable SetTitulo()
+        {
+            DataTable dt = new DataTable();
+            for (int i=0;i<lista.Columns.Count;i++)
+            {
+                dt.Columns.Add(lista.Columns[i].ColumnName);
+            }
+            return dt;
+        }
+
+        private DataTable LlenarFila(DataTable dt,int i)
+        {
+            dt.Rows.Add(lista.Rows[i][0]);
+            dgvBuscarTodos.DataSource = dt;
+            MessageBox.Show("");
+            for (int j=1;j<lista.Columns.Count;j++)
+            {
+                dt.Rows[i][j] = lista.Rows[i][j];
+            }
+            return dt;
+        }
+
         private void ActualizarDGV()
         {
+            DataTable dt = SetTitulo();
             dgvBuscarTodos.DataSource = lista;
             if (txtBuscar.Text != string.Empty)
             {
@@ -52,31 +75,20 @@ namespace GUI
                         {
                             MessageBox.Show(lista.Rows[i][j].ToString());
                             encontrado = true;
+                            dt = LlenarFila(dt,i);
+                            break;
                         }
                     }
-                    if (!encontrado)
-                    {
-                        MessageBox.Show(dgvBuscarTodos.Rows[i].Index.ToString());
-                        dgvBuscarTodos.Rows[i].
-                        dgvBuscarTodos.Rows[i].Visible = false;
-                        try
-                        {
-                        }
-                        catch
-                        {
-                            dgvBuscarTodos.DataSource = new DataTable();
-                        }
-                    }
+                        
+                    
 
 
                 }
+                dgvBuscarTodos.DataSource = dt;
             }
             else
             {
-                for (int i = 0; i < lista.Rows.Count; i++)
-                {
-                    dgvBuscarTodos.Rows[i].Visible = true;
-                }
+                dgvBuscarTodos.DataSource = lista;
             }
         }
 
