@@ -18,6 +18,7 @@ namespace DAL
             {
                 try
                 {
+                    conexion.Open();
                     using (var cmd = new SqlCommand("spGuardarHorarioSemana", conexion))
                     {
                         cmd.Connection = conexion;
@@ -36,7 +37,7 @@ namespace DAL
             return retVal;
         }
 
-        public HorarioSemanaET Buscar(int id)
+        public DataTable Buscar(int id)
         {
             HorarioSemanaET horario = null;
             bool retornoNulo = true;
@@ -52,32 +53,10 @@ namespace DAL
                         SqlDataAdapter da = new SqlDataAdapter();
                         cmd.Connection = conexion;
                         cmd.CommandType = CommandType.StoredProcedure;
-                        SqlParameter idOutput = new SqlParameter("@id", SqlDbType.Int);
-                        idOutput.Direction = ParameterDirection.Output;
-                        cmd.Parameters.Add(idOutput);
-
-                        SqlDataReader reader = cmd.ExecuteReader();
-                        if (idOutput.Value != DBNull.Value)
-                        {
-                            id = Convert.ToInt32(idOutput.Value);
-                            retornoNulo = false;
-                        }
-
+                        cmd.Parameters.Add(new SqlParameter("@id", id));
+                        da.SelectCommand = cmd;
                         da.Fill(dt);
-                        if (id != 0 && !retornoNulo)
-                        {
-                            horario.Id = Convert.ToInt32(dt.Rows[0]["idHorarioSemana"]);
-                            horario.HorarioDia[0] = Convert.ToInt32(dt.Rows[0]["idHorarioDia"]);
-                            horario.HorarioDia[1] = Convert.ToInt32(dt.Rows[1]["idHorarioDia"]);
-                            horario.HorarioDia[2] = Convert.ToInt32(dt.Rows[2]["idHorarioDia"]);
-                            horario.HorarioDia[3] = Convert.ToInt32(dt.Rows[3]["idHorarioDia"]);
-                            horario.HorarioDia[4] = Convert.ToInt32(dt.Rows[4]["idHorarioDia"]);
-                            horario.HorarioDia[5] = Convert.ToInt32(dt.Rows[5]["idHorarioDia"]);
-                            horario.HorarioDia[6] = Convert.ToInt32(dt.Rows[6]["idHorarioDia"]);
-                            horario.Estado = true;
-                        }
-
-                        return horario;
+                        return dt;
                     }
                 }
                 catch (Exception ex)
@@ -97,6 +76,7 @@ namespace DAL
             {
                 try
                 {
+                    conexion.Open();
                     using (var cmd = new SqlCommand("spActualizarHorarioSemana", conexion))
                     {
                         cmd.Connection = conexion;
@@ -131,6 +111,7 @@ namespace DAL
             {
                 try
                 {
+
                     using (var cmd = new SqlCommand("spEliminarHorarioSemana", conexion))
                     {
                         cmd.Connection = conexion;

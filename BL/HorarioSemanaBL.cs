@@ -2,6 +2,7 @@
 using ET;
 using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -16,7 +17,7 @@ namespace BL
             return dal.Guardar(horarioSemana);
         }
 
-        public HorarioSemanaET Buscar(int id)
+        public DataTable Buscar(int id)
         {
             HorarioSemanaDAL dal = new HorarioSemanaDAL();
             return dal.Buscar(id);

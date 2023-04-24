@@ -17,7 +17,7 @@ namespace BL
             return dal.Guardar(raza);
         }
 
-        public RazaET Buscar(int id)
+        public DataTable Buscar(int id)
         {
             RazaDAL dal = new RazaDAL();
             return dal.Buscar(id);

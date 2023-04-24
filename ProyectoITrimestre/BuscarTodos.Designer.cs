@@ -41,7 +41,7 @@
             panel1.Dock = DockStyle.Top;
             panel1.Location = new Point(0, 0);
             panel1.Name = "panel1";
-            panel1.Size = new Size(777, 100);
+            panel1.Size = new Size(778, 100);
             panel1.TabIndex = 0;
             // 
             // txtBuscar
@@ -63,7 +63,7 @@
             dgvBuscarTodos.RightToLeft = RightToLeft.No;
             dgvBuscarTodos.RowHeadersWidth = 62;
             dgvBuscarTodos.RowTemplate.Height = 33;
-            dgvBuscarTodos.Size = new Size(777, 269);
+            dgvBuscarTodos.Size = new Size(778, 270);
             dgvBuscarTodos.TabIndex = 2;
             // 
             // BuscarTodos
@@ -71,7 +71,7 @@
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(42, 45, 48);
-            ClientSize = new Size(777, 369);
+            ClientSize = new Size(778, 370);
             Controls.Add(dgvBuscarTodos);
             Controls.Add(panel1);
             FormBorderStyle = FormBorderStyle.None;

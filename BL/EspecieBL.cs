@@ -17,7 +17,7 @@ namespace BL
             return dal.Guardar(especie);
         }
 
-        public EspecieET Buscar(int id)
+        public DataTable Buscar(int id)
         {
             EspecieDAL dal = new EspecieDAL();
             return dal.Buscar(id);

@@ -17,7 +17,7 @@ namespace BL
             return dal.Guardar(horarioDia);
         }
 
-        public HorarioDiaET Buscar(int id)
+        public DataTable Buscar(int id)
         {
             HorarioDiaDAL dal = new HorarioDiaDAL();
             return dal.Buscar(id);

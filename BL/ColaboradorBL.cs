@@ -17,7 +17,7 @@ namespace BL
             return dal.Guardar(colaborador);
         }
 
-        public ColaboradorET Buscar(int id)
+        public DataTable Buscar(int id)
         {
             ColaboradorDAL dal = new ColaboradorDAL();
             return dal.Buscar(id);

@@ -18,6 +18,7 @@ namespace DAL
             {
                 try
                 {
+                    conexion.Open();
                     using (var cmd = new SqlCommand("spGuardarServicio", conexion))
                     {
                         cmd.Connection = conexion;
@@ -39,7 +40,7 @@ namespace DAL
             return retVal;
         }
 
-        public ServiciosET Buscar(int id)
+        public DataTable Buscar(int id)
         {
             ServiciosET servicio = null;
             bool retornoNulo = true;
@@ -55,30 +56,10 @@ namespace DAL
                         SqlDataAdapter da = new SqlDataAdapter();
                         cmd.Connection = conexion;
                         cmd.CommandType = CommandType.StoredProcedure;
-                        SqlParameter idOutput = new SqlParameter("@id", SqlDbType.Int);
-                        idOutput.Direction = ParameterDirection.Output;
-                        cmd.Parameters.Add(idOutput);
-
-                        SqlDataReader reader = cmd.ExecuteReader();
-                        if (idOutput.Value != DBNull.Value)
-                        {
-                            id = Convert.ToInt32(idOutput.Value);
-                            retornoNulo = false;
-                        }
-
+                        cmd.Parameters.Add(new SqlParameter("@id", id));
+                        da.SelectCommand = cmd;
                         da.Fill(dt);
-                        if (id != 0 && !retornoNulo)
-                        {
-                            servicio.Id = Convert.ToInt32(dt.Rows[0]["id"]);
-                            servicio.Nombre = Convert.ToString(dt.Rows[0]["nombre"]);
-                            servicio.Descripcion = Convert.ToString(dt.Rows[0]["descripcion"]);
-                            servicio.DuracionMin = Convert.ToInt32(dt.Rows[0]["duracionMin"]);
-                            servicio.Precio = float.Parse(Convert.ToString(dt.Rows[0]["precio"]));
-                            servicio.Estado = Convert.ToBoolean(dt.Rows[0]["estado"]);
-                        }
-                            
-
-                        return servicio;
+                        return dt;
                     }
                 }
                 catch (Exception ex)
@@ -124,6 +105,7 @@ namespace DAL
             {
                 try
                 {
+                    conexion.Open();
                     using (var cmd = new SqlCommand("spActualizarServicio", conexion))
                     {
                         cmd.Connection = conexion;
@@ -158,6 +140,7 @@ namespace DAL
             {
                 try
                 {
+                    conexion.Open();
                     using (var cmd = new SqlCommand("spEliminarServicio", conexion))
                     {
                         cmd.Connection = conexion;

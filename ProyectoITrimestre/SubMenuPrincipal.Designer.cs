@@ -53,12 +53,13 @@
             btnIngresar.FlatStyle = FlatStyle.Flat;
             btnIngresar.ForeColor = Color.FromArgb(246, 246, 246);
             btnIngresar.Location = new Point(97, 130);
-            btnIngresar.Margin = new Padding(2, 2, 2, 2);
+            btnIngresar.Margin = new Padding(2);
             btnIngresar.Name = "btnIngresar";
             btnIngresar.Size = new Size(97, 37);
             btnIngresar.TabIndex = 1;
             btnIngresar.Text = "Ingresar";
             btnIngresar.UseVisualStyleBackColor = false;
+            btnIngresar.Click += btnIngresar_Click;
             // 
             // pnlSubPrincipal
             // 
@@ -66,7 +67,7 @@
             pnlSubPrincipal.BorderStyle = BorderStyle.FixedSingle;
             pnlSubPrincipal.ForeColor = Color.FromArgb(246, 246, 246);
             pnlSubPrincipal.Location = new Point(11, 189);
-            pnlSubPrincipal.Margin = new Padding(2, 2, 2, 2);
+            pnlSubPrincipal.Margin = new Padding(2);
             pnlSubPrincipal.Name = "pnlSubPrincipal";
             pnlSubPrincipal.RightToLeft = RightToLeft.Yes;
             pnlSubPrincipal.Size = new Size(778, 370);
@@ -78,7 +79,7 @@
             btnBuscarTodos.FlatStyle = FlatStyle.Flat;
             btnBuscarTodos.ForeColor = Color.FromArgb(246, 246, 246);
             btnBuscarTodos.Location = new Point(620, 130);
-            btnBuscarTodos.Margin = new Padding(2, 2, 2, 2);
+            btnBuscarTodos.Margin = new Padding(2);
             btnBuscarTodos.Name = "btnBuscarTodos";
             btnBuscarTodos.Size = new Size(97, 37);
             btnBuscarTodos.TabIndex = 3;
@@ -92,12 +93,13 @@
             btnBuscar.FlatStyle = FlatStyle.Flat;
             btnBuscar.ForeColor = Color.FromArgb(246, 246, 246);
             btnBuscar.Location = new Point(354, 130);
-            btnBuscar.Margin = new Padding(2, 2, 2, 2);
+            btnBuscar.Margin = new Padding(2);
             btnBuscar.Name = "btnBuscar";
             btnBuscar.Size = new Size(97, 37);
             btnBuscar.TabIndex = 4;
             btnBuscar.Text = "Buscar";
             btnBuscar.UseVisualStyleBackColor = false;
+            btnBuscar.Click += btnBuscar_Click;
             // 
             // SubMenuPrincipal
             // 
@@ -111,7 +113,7 @@
             Controls.Add(btnIngresar);
             Controls.Add(lblTitulo);
             FormBorderStyle = FormBorderStyle.None;
-            Margin = new Padding(2, 2, 2, 2);
+            Margin = new Padding(2);
             Name = "SubMenuPrincipal";
             Text = "SubMenuPrincipalcs";
             ResumeLayout(false);

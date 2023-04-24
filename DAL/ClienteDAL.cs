@@ -18,6 +18,7 @@ namespace DAL
             {
                 try
                 {
+                    conexion.Open();
                     using (var cmd = new SqlCommand("spGuardarCliente", conexion))
                     {
                         cmd.Connection = conexion;
@@ -41,7 +42,7 @@ namespace DAL
             return retVal;
         }
 
-        public ClienteET Buscar(int id)
+        public DataTable Buscar(int id)
         {
             ClienteET cliente = null;
             bool retornoNulo = true;
@@ -57,30 +58,10 @@ namespace DAL
                         SqlDataAdapter da = new SqlDataAdapter();
                         cmd.Connection = conexion;
                         cmd.CommandType = CommandType.StoredProcedure;
-                        SqlParameter idOutput = new SqlParameter("@id", SqlDbType.Int);
-                        idOutput.Direction = ParameterDirection.Output;
-                        cmd.Parameters.Add(idOutput);
-
-                        SqlDataReader reader = cmd.ExecuteReader();
-                        if (idOutput.Value != DBNull.Value)
-                        {
-                            id = Convert.ToInt32(idOutput.Value);
-                            retornoNulo = false;
-                        }
-
+                        cmd.Parameters.Add(new SqlParameter("@id", id));
+                        da.SelectCommand = cmd;
                         da.Fill(dt);
-                        if (id != 0 && !retornoNulo)
-                        {
-                            cliente.Id = Convert.ToInt32(dt.Rows[0]["id"]);
-                            cliente.Nombre = Convert.ToString(dt.Rows[0]["nombre"]);
-                            cliente.Apellido1 = Convert.ToString(dt.Rows[0]["apellido1"]);
-                            cliente.Apellido2 = Convert.ToString(dt.Rows[0]["apellido2"]);
-                            cliente.Cedula = Convert.ToString(dt.Rows[0]["cedula"]);
-                            cliente.Telefono = Convert.ToString(dt.Rows[0]["telefono"]);
-                            cliente.Estado = Convert.ToBoolean(dt.Rows[0]["estado"]);
-                        }
-
-                        return cliente;
+                        return dt;
                     }
                 }
                 catch (Exception ex)
@@ -126,6 +107,7 @@ namespace DAL
             {
                 try
                 {
+                    conexion.Open();
                     using (var cmd = new SqlCommand("spActualizarCliente", conexion))
                     {
                         cmd.Connection = conexion;
@@ -157,6 +139,7 @@ namespace DAL
             {
                 try
                 {
+                    conexion.Open();
                     using (var cmd = new SqlCommand("spEliminarCliente", conexion))
                     {
                         cmd.Connection = conexion;

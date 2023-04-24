@@ -18,6 +18,7 @@ namespace DAL
             {
                 try
                 {
+                    conexion.Open();
                     using (var cmd = new SqlCommand("spGuardarPermiso", conexion))
                     {
                         cmd.Connection = conexion;
@@ -92,6 +93,7 @@ namespace DAL
             {
                 try
                 {
+                    conexion.Open();
                     using (var cmd = new SqlCommand("spActualizarPermiso", conexion))
                     {
                         cmd.Connection = conexion;

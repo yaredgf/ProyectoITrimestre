@@ -17,7 +17,7 @@ namespace BL
             return dal.Guardar(cita);
         }
 
-        public CitaET Buscar(int id)
+        public DataTable Buscar(int id)
         {
             CitaDAL dal = new CitaDAL();
             return dal.Buscar(id);

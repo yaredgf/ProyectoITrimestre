@@ -17,7 +17,7 @@ namespace BL
             return dal.Guardar(servicios);
         }
 
-        public ServiciosET Buscar(int id)
+        public DataTable Buscar(int id)
         {
             ServiciosDAL dal = new ServiciosDAL();
             return dal.Buscar(id);

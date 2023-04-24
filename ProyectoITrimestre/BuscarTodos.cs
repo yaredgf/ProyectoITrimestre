@@ -26,6 +26,7 @@ namespace GUI
             dgvBuscarTodos.DataSource = data;
             dgvBuscarTodos.ReadOnly = true;
             lista = data;
+            dgvBuscarTodos.ForeColor = Color.Black;
         }
         private DataTable CargarDataTable(DataTable dt)
         {
@@ -41,21 +42,19 @@ namespace GUI
         private DataTable SetTitulo()
         {
             DataTable dt = new DataTable();
-            for (int i=0;i<lista.Columns.Count;i++)
+            for (int i = 0; i < lista.Columns.Count; i++)
             {
                 dt.Columns.Add(lista.Columns[i].ColumnName);
             }
             return dt;
         }
 
-        private DataTable LlenarFila(DataTable dt,int i)
+        private DataTable LlenarFila(DataTable dt, int i)
         {
             dt.Rows.Add(lista.Rows[i][0]);
-            dgvBuscarTodos.DataSource = dt;
-            MessageBox.Show("");
-            for (int j=1;j<lista.Columns.Count;j++)
+            for (int j = 1; j < lista.Columns.Count; j++)
             {
-                dt.Rows[i][j] = lista.Rows[i][j];
+                dt.Rows[dt.Rows.Count - 1][j] = lista.Rows[i][j];
             }
             return dt;
         }
@@ -68,19 +67,16 @@ namespace GUI
             {
                 for (int i = 0; i < lista.Rows.Count; i++)
                 {
-                    bool encontrado = false;
                     for (int j = 0; j < lista.Columns.Count; j++)
                     {
                         if (lista.Rows[i][j].ToString().ToUpper().Trim().Contains(txtBuscar.Text.ToUpper().Trim()))
                         {
-                            MessageBox.Show(lista.Rows[i][j].ToString());
-                            encontrado = true;
-                            dt = LlenarFila(dt,i);
+                            dt = LlenarFila(dt, i);
                             break;
                         }
                     }
-                        
-                    
+
+
 
 
                 }

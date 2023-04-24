@@ -18,6 +18,7 @@ namespace DAL
             {
                 try
                 {
+                    conexion.Open();
                     using (var cmd = new SqlCommand("spGuardarHorarioDia", conexion))
                     {
                         cmd.Connection = conexion;
@@ -37,7 +38,7 @@ namespace DAL
             return retVal;
         }
 
-        public HorarioDiaET Buscar(int id)
+        public DataTable Buscar(int id)
         {
             HorarioDiaET horario = null;
             bool retornoNulo = true;
@@ -53,27 +54,10 @@ namespace DAL
                         SqlDataAdapter da = new SqlDataAdapter();
                         cmd.Connection = conexion;
                         cmd.CommandType = CommandType.StoredProcedure;
-                        SqlParameter idOutput = new SqlParameter("@id", SqlDbType.Int);
-                        idOutput.Direction = ParameterDirection.Output;
-                        cmd.Parameters.Add(idOutput);
-
-                        SqlDataReader reader = cmd.ExecuteReader();
-                        if (idOutput.Value != DBNull.Value)
-                        {
-                            id = Convert.ToInt32(idOutput.Value);
-                            retornoNulo = false;
-                        }
-
+                        cmd.Parameters.Add(new SqlParameter("@id", id));
+                        da.SelectCommand = cmd;
                         da.Fill(dt);
-                        if (id != 0 && !retornoNulo)
-                        {
-                            horario.Id = Convert.ToInt32(dt.Rows[0]["id"]);
-                            horario.HoraEntrada = TimeOnly.Parse(Convert.ToString(dt.Rows[0]["horaEntrada"]));
-                            horario.HoraSalida = TimeOnly.Parse(Convert.ToString(dt.Rows[0]["horaSalida"]));
-                            horario.Estado = Convert.ToBoolean(dt.Rows[0]["estado"]);
-                        }
-
-                        return horario;
+                        return dt;
                     }
                 }
                 catch (Exception ex)
@@ -119,6 +103,7 @@ namespace DAL
             {
                 try
                 {
+                    conexion.Open();
                     using (var cmd = new SqlCommand("spActualizarHorarioDia", conexion))
                     {
                         cmd.Connection = conexion;
@@ -147,6 +132,7 @@ namespace DAL
             {
                 try
                 {
+                    conexion.Open();
                     using (var cmd = new SqlCommand("spEliminarHorarioDia", conexion))
                     {
                         cmd.Connection = conexion;

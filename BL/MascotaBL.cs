@@ -17,7 +17,7 @@ namespace BL
             return dal.Guardar(mascota);
         }
 
-        public MascotaET Buscar(int id)
+        public DataTable Buscar(int id)
         {
             MascotaDAL dal = new MascotaDAL();
             return dal.Buscar(id);

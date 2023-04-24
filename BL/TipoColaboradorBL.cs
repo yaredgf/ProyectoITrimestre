@@ -17,7 +17,7 @@ namespace BL
             return dal.Guardar(tipo);
         }
 
-        public TipoColaboradorET Buscar(int id)
+        public DataTable Buscar(int id)
         {
             TipoColaboradorDAL dal = new TipoColaboradorDAL();
             return dal.Buscar(id);

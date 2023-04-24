@@ -37,11 +37,11 @@ namespace GUI
             switch (opcPrincipal)
             {
                 case 1:
-                    //pnlSubPrincipal.Controls.Clear();
-                    //IngresarCliente IngresarCliente = new IngresarCliente();
-                    //IngresarCliente.TopLevel = false;
-                    //pnlSubPrincipal.Controls.Add(IngresarCliente);
-                    //IngresarCliente.Show();
+                    pnlSubPrincipal.Controls.Clear();
+                    IngresarClientes IngresarClientes = new IngresarClientes();
+                    IngresarClientes.TopLevel = false;
+                    pnlSubPrincipal.Controls.Add(IngresarClientes);
+                    IngresarClientes.Show();
                     break;
                 case 2:
                     break;
@@ -59,11 +59,11 @@ namespace GUI
 
         private void btnBuscar_Click(object sender, EventArgs e)
         {
-            //pnlSubPrincipal.Controls.Clear();
-            //Buscar Buscar = new Buscar(opcPrincipal);
-            //Buscar.TopLevel = false;
-            //pnlSubPrincipal.Controls.Add(Buscar);
-            //Buscar.Show();
+            pnlSubPrincipal.Controls.Clear();
+            Buscar Buscar = new Buscar(opcPrincipal);
+            Buscar.TopLevel = false;
+            pnlSubPrincipal.Controls.Add(Buscar);
+            Buscar.Show();
         }
 
         private void btnBuscarTodos_Click(object sender, EventArgs e)

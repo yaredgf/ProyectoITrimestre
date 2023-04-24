@@ -19,6 +19,7 @@ namespace DAL
             {
                 try
                 {
+                    conexion.Open();
                     using (var cmd = new SqlCommand("spGuardarCita", conexion))
                     {
                         cmd.Connection = conexion;
@@ -42,11 +43,10 @@ namespace DAL
             return retVal;
         }
 
-        public CitaET Buscar(int id)
+        public DataTable Buscar(int id)
         {
             CitaET cita = null;
             bool retornoNulo = true;
-
             DataTable dt = new DataTable();
             using (var conexion = GetConnection())
             {
@@ -58,31 +58,10 @@ namespace DAL
                         SqlDataAdapter da = new SqlDataAdapter();
                         cmd.Connection = conexion;
                         cmd.CommandType = CommandType.StoredProcedure;
-                        SqlParameter idOutput = new SqlParameter("@id", SqlDbType.Int);
-                        idOutput.Direction = ParameterDirection.Output;
-                        cmd.Parameters.Add(idOutput);
-
-                        SqlDataReader reader = cmd.ExecuteReader();
-                        if (idOutput.Value != DBNull.Value)
-                        {
-                            id = Convert.ToInt32(idOutput.Value);
-                            retornoNulo = false;
-                        }
-
+                        cmd.Parameters.Add(new SqlParameter("@id", id));
+                        da.SelectCommand = cmd;
                         da.Fill(dt);
-                        if (id != 0 && !retornoNulo)
-                        {
-                            cita.Id = Convert.ToInt32(dt.Rows[0]["id"]);
-                            cita.IdServicio = Convert.ToInt32(dt.Rows[0]["idServicio"]);
-                            cita.IdColaborador = Convert.ToInt32(dt.Rows[0]["idColaborador"]);
-                            cita.IdMascota = Convert.ToInt32(dt.Rows[0]["idMascota"]);
-                            cita.FechaCita = DateTime.Parse(Convert.ToString(dt.Rows[0]["fechaCita"]));
-                            cita.FechaEmision = DateTime.Parse(Convert.ToString(dt.Rows[0]["fechaEmision"]));
-                            cita.Asistencia = bool.Parse(Convert.ToString(dt.Rows[0]["asistencia"]));
-                            cita.Estado = Convert.ToBoolean(dt.Rows[0]["estado"]);
-                        }
-
-                        return cita;
+                        return dt;
                     }
                 }
                 catch (Exception ex)
@@ -108,7 +87,6 @@ namespace DAL
                         cmd.Connection = conexion;
                         cmd.CommandType = CommandType.StoredProcedure;
                         SqlDataReader reader = cmd.ExecuteReader();
-
                         da.Fill(dt);
                         return dt;
                     }
@@ -128,6 +106,7 @@ namespace DAL
             {
                 try
                 {
+                    conexion.Open();
                     using (var cmd = new SqlCommand("spActualizarCita", conexion))
                     {
                         cmd.Connection = conexion;
@@ -160,6 +139,7 @@ namespace DAL
             {
                 try
                 {
+                    conexion.Open();
                     using (var cmd = new SqlCommand("spEliminarCita", conexion))
                     {
                         cmd.Connection = conexion;
